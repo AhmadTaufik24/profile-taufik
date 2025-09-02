@@ -1,6 +1,6 @@
-/* ======================================================= */
-/* ===         HALAMAN DALAM PERBAIKAN (MAINTENANCE)     === */
-/* ======================================================= */
+
+/*  HALAMAN DALAM PERBAIKAN (MAINTENANCE) */
+
 
 /* --- Kontainer Utama --- */
 .maintenance-container {
@@ -10,7 +10,7 @@
     align-items: center;
     text-align: center;
     min-height: calc(100vh - 150px); /* Tinggi layar dikurangi header & footer */
-    padding: 40px 20px;
+    padding: 80px 40px;
     overflow: hidden;
 }
 
@@ -102,4 +102,5 @@
     .maintenance-text {
         font-size: 1rem;
     }
+
 }
