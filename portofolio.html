@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Portofolio</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ffffff"/>
+  <meta name="description" content="Website Portofolio Taufik - Fotografer, Retoucher, dan Desainer."/>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/portofolio.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    .card-item { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .card-item.is-visible { opacity: 1; transform: translateY(0); }
+</style>
+
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="#home" class="logo">TAUFIK</a>
+
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html" rel="noopener">Beranda</a></li>
+          <li><a href="portofolio.html" rel="noopener">Portofolio</a></li>
+          <li><a href="about.html"  rel="noopener">Tentang</a></li>
+          <li><a href="layanan.html"  rel="noopener">Layanan</a></li>
+          <li><a href="jurnal.html" rel="noopener">Jurnal</a></li>
+          <li><a href="kontak.html"  rel="noopener">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-right">
+        <div class="toggle-container">
+          <!-- Toggle Mode -->
+          <div class="switch-toggle active-left" id="modeToggle" title="Ubah Mode">
+            <img src="https://img.icons8.com/ios-glyphs/30/f0f0f0/moon-symbol.png" alt="moon" class="icon icon-moon"/>
+            <img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/sun--v1.png" alt="sun" class="icon icon-sun"/>
+            <span class="switch-thumb"></span>
+          </div>
+
+          <!-- Toggle Bahasa -->
+          <div class="switch-toggle active-left" id="langToggle" title="Ganti Bahasa">
+            <img src="https://img.icons8.com/emoji/36/indonesia-emoji.png" class="icon icon-id" alt="ID" />
+            <img src="https://img.icons8.com/emoji/36/united-kingdom-emoji.png" class="icon icon-uk" alt="UK" />
+            <span class="switch-thumb"></span>
+          </div>
+        </div>
+
+        <div class="hamburger" id="hamburger" title="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+<main>
+    <div class="maintenance-container">
+
+        <div class="gears-animation">
+            <i class="fa-solid fa-gear gear-one"></i>
+            <i class="fa-solid fa-gear gear-two"></i>
+        </div>
+
+        <h2 class="maintenance-title">Mohon maaf Halaman Sedang Dalam Perbaikan</h2>
+        <p class="maintenance-text">
+            Kami sedang bekerja keras untuk membuat halaman ini menjadi lebih baik dan penuh fitur menarik. Mohon bersabar dan silakan kembali lagi nanti!
+        </p>
+
+        <a href="index.html" class="btn-back-home">
+            <i class="fa-solid fa-arrow-left"></i> &nbsp; Kembali ke Beranda
+        </a>
+
+    </div>
+</main>
+
+<footer class="compact-footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-top-row">
+      <h3 class="footer-logo">TAUFIK</h3>
+      <div class="footer-socials">
+        <a href="#" title="Instagram"><img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/instagram-new.png" alt="Instagram"/></a>
+        <a href="#" title="LinkedIn"><img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/linkedin.png" alt="LinkedIn"/></a>
+        <a href="#" title="Behance"><img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/behance.png" alt="Behance"/></a>
+        <a href="#" title="Dribbble"><img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/instagram-new.png" alt="Dribbble"/></a>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom-row">
+      <p class="footer-copyright">© 2025 Taufik. All Rights Reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="#portfolio">Portofolio</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#services">Layanan</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/portofolio.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* ======================================================= */
+/* ===         HALAMAN DALAM PERBAIKAN (MAINTENANCE)     === */
+/* ======================================================= */
+
+/* --- Kontainer Utama --- */
+.maintenance-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 150px); /* Tinggi layar dikurangi header & footer */
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+/* --- Animasi Roda Gigi --- */
+.gears-animation {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    margin-bottom: 40px;
+}
+
+.gears-animation .fa-gear {
+    position: absolute;
+    opacity: 0.7;
+    transition: color 0.4s ease;
+}
+
+.gear-one {
+    font-size: 100px;
+    color: var(--highlight-color);
+    top: 0;
+    left: 0;
+    animation: spin 10s linear infinite;
+}
+
+.gear-two {
+    font-size: 50px;
+    color: var(--text-color);
+    top: 55px;
+    left: 75px;
+    animation: spin-reverse 10s linear infinite;
+}
+
+/* --- Teks Informasi --- */
+.maintenance-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.maintenance-text {
+    font-size: 1.1rem;
+    max-width: 550px;
+    opacity: 0.6;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+/* --- Tombol Kembali --- */
+.btn-back-home {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border: 1px solid var(--navbar-border);
+    border-radius: 8px;
+    background-color: var(--btn-secondary-bg);
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-back-home:hover {
+    background-color: var(--highlight-color);
+    border-color: var(--highlight-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(93, 155, 214, 0.2);
+}
+
+/* --- Keyframes untuk Animasi Putaran --- */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+/* Penyesuaian untuk Mobile */
+@media (max-width: 768px) {
+    .maintenance-title {
+        font-size: 1.8rem;
+    }
+    .maintenance-text {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,405 @@
+
+/*-- STYLE BARU UNTUK HALAMAN JURNAL --*/
+
+/* --- Penyesuaian Latar dan Kontainer Utama --- */
+main {
+    padding-top: 70px; /* Memberi ruang di bawah navbar fixed */
+}
+
+body.dark-mode .hero-section {
+    background: radial-gradient(ellipse at top center, hsla(217, 100%, 50%, 0.08) 0%, transparent 60%);
+}
+
+
+/* -- HERO SECTION & FILTER (VERSI RINGKAS)--*/
+
+.hero-section {
+    text-align: center;
+    padding: 40px 20px 30px; 
+    border-bottom: 1px solid var(--navbar-border);
+    transition: border-color 0.4s ease;
+}
+
+.hero-section h2 {
+    font-size: 2.2rem; 
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1rem; 
+    color: var(--text-color);
+    opacity: 0.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.filter-section {
+    padding: 30px 20px 40px;
+}
+
+.filter-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid var(--navbar-border);
+    border-radius: 99px; /* Bentuk pil */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 0 4px rgba(93, 155, 214, 0.2);
+}
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--btn-secondary-border);
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-secondary-text);
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--highlight-color);
+    color: var(--highlight-color);
+}
+
+.filter-btn.active {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    border-color: var(--btn-primary-bg);
+}
+.journal-grid-section {
+    padding: 0 20px 80px;
+}
+
+.journal-grid {
+    display: grid;
+    /* Grid responsif yang cerdas */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.journal-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--navbar-border);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--highlight-color);
+    box-shadow: 0 15px 30px rgba(93, 155, 214, 0.15);
+}
+
+body.dark-mode .journal-card {
+    box-shadow: none;
+}
+
+body.dark-mode .journal-card:hover {
+    box-shadow: 0 15px 30px rgba(93, 155, 214, 0.1);
+}
+
+.card-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Proporsi gambar yang modern */
+    object-fit: cover;
+    border-bottom: 1px solid var(--navbar-border);
+}
+
+.card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.7;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-button {
+    display: block; /* Tombol memenuhi lebar kartu */
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: auto;
+}
+
+.journal-card:hover .card-button {
+    background-color: var(--highlight-color);
+    transform: scale(1.02);
+}
+
+/* --- Desain Halaman Detail Jurnal --- */
+.back-link {
+    display: inline-block;
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.journal-detail-title {
+    font-size: 2.8rem;
+}
+.journal-meta {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.6;
+    margin-bottom: 30px;
+}
+.journal-detail-image {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+.journal-full-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Penyesuaian untuk Share Buttons */
+.share-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* --  STYLE BARU UNTUK HALAMAN DETAIL JURNAL  --*/
+
+.journal-detail-container {
+    max-width: 750px; 
+    margin: 40px auto 80px auto;
+    padding: 0 20px;
+}
+
+/* --- Tombol "Kembali" --- */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+    opacity: 0.7;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--highlight-color);
+    opacity: 1;
+    gap: 12px;
+}
+
+/* --- Area Judul & Meta (Penulis, Tanggal) --- */
+.journal-detail-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.journal-meta {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.6;
+    margin-bottom: 40px;
+}
+
+.journal-meta strong {
+    font-weight: 500;
+}
+
+/* --- Gambar Utama Artikel --- */
+.journal-detail-image {
+    width: 100%;
+    border-radius: 16px; /* Sudut tumpul, sama seperti kartu */
+    margin-bottom: 40px;
+    border: 1px solid var(--navbar-border);
+}
+
+/* --- Konten Artikel (Paling Penting untuk Keterbacaan) --- */
+.journal-full-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.journal-full-content p {
+    margin-bottom: 1.5em;
+}
+
+.journal-full-content strong {
+    font-weight: 600;
+    color: var(--text-color); /* Lebih jelas dari teks biasa */
+}
+
+.journal-full-content a {
+    color: var(--highlight-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: 500;
+}
+
+.journal-full-content h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+}
+
+.journal-full-content ul {
+    margin-bottom: 1.5em;
+    padding-left: 25px;
+}
+
+.journal-full-content li {
+    margin-bottom: 0.5em;
+}
+
+/* --- Bagian Tombol Share --- */
+.share-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--navbar-border);
+}
+
+.share-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.share-btn.facebook { background-color: #1877F2; }
+.share-btn.whatsapp { background-color: #25D366; }
+.share-btn.twitter { background-color: #1DA1F2; }
+
+/* --- Responsivitas untuk Judul di Mobile --- */
+@media (max-width: 768px) {
+    .journal-detail-title {
+        font-size: 2.2rem;
+    }
+    .journal-full-content {
+        font-size: 1rem;
+    }
+}
+
+
+/* --PERBAIKAN FINAL: HERO SECTION HALAMAN JURNAL--*/
+
+
+
+body.page-jurnal .hero-section {
+ 
+    min-height: auto !important; 
+    
+    padding: 50px 20px 40px !important; 
+    
+    text-align: center !important; 
+}
+body.page-jurnal .hero-section h2 {
+    font-size: 2.2rem !important; 
+}
+body.page-jurnal .hero-section p {
+    font-size: 1rem !important;
+}
+
+/* -- BACKGROUND KONTEN JURNAL (VERSI PAKSA)-- */
+
+.journal-detail-container {
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: background-color 0.4s ease;
+
+    /* Background untuk MODE TERANG dengan !important */
+    background: radial-gradient(circle at 50% 0%, rgba(93, 155, 214, 0.04) 0%, transparent 70%) !important;
+}
+
+body.dark-mode .journal-detail-container {
+    /* Background untuk MODE GELAP dengan !important */
+    background: radial-gradient(circle at 50% 0%, rgba(93, 155, 214, 0.07) 0%, transparent 70%) !important;
+}
+
+@media (max-width: 768px) {
+    .journal-detail-container {
+        padding: 25px;
+    }
+}
+

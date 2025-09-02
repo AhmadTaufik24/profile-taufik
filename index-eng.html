@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Taufik's Profile</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ffffff"/>
+  <meta name="description" content="Taufik's Portfolio Website - Photographer, Retoucher, and Designer."/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="#home" class="logo">TAUFIK</a>
+
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index-eng.html" rel="noopener">Home</a></li>
+      <li><a href="portofolio-eng.html" rel="noopener">Portfolio</a></li>
+      <li><a href="about-eng.html"  rel="noopener">About</a></li>
+      <li><a href="layanan-eng.html" rel="noopener">Services</a></li>
+      <li><a href="jurnal-eng.html"  rel="noopener">Journal</a></li>
+      <li><a href="kontak-eng.html" rel="noopener">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-right">
+        <div class="toggle-container">
+          <!-- Mode Toggle -->
+          <div class="switch-toggle active-left" id="modeToggle" title="Toggle Mode">
+            <img src="https://img.icons8.com/ios-glyphs/30/f0f0f0/moon-symbol.png" alt="moon" class="icon icon-moon"/>
+            <img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/sun--v1.png" alt="sun" class="icon icon-sun"/>
+            <span class="switch-thumb"></span>
+          </div>
+
+          <!-- Language Toggle -->
+          <div class="switch-toggle active-right" id="langToggle" title="Switch Language">
+            <img src="https://img.icons8.com/emoji/36/indonesia-emoji.png" class="icon icon-id" alt="ID" />
+            <img src="https://img.icons8.com/emoji/36/united-kingdom-emoji.png" class="icon icon-uk" alt="UK" />
+            <span class="switch-thumb"></span>
+          </div>
+        </div>
+
+        <div class="hamburger" id="hamburger" title="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index-eng.html" rel="noopener">Home</a></li>
+      <li><a href="portofolio-eng.html" rel="noopener">Portfolio</a></li>
+      <li><a href="about-eng.html"  rel="noopener">About</a></li>
+      <li><a href="layanan-eng.html" rel="noopener">Services</a></li>
+      <li><a href="jurnal-eng.html"  rel="noopener">Journal</a></li>
+      <li><a href="kontak-eng.html" rel="noopener">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="home">
+    <section class="hero-section">
+      <div class="hero-content animate-on-scroll">
+        <div class="hero-text">
+          <h1>Hi, I'm Taufik –<br>I'm a 
+    <span class="role-wrapper">
+        <span class="role-placeholder">Photographer</span>
+        <span id="role-text" class="typing-effect"></span>
+    </span>
+</h1>
+          <p>A creative professional specializing in photography, retouching, and design, focused on delivering high-quality visual aesthetics.</p>
+          <div class="hero-buttons">
+            <a href="portofolio-eng.html"  rel="noopener" class="btn btn-primary">View My Portfolio</a>
+            <a href="kontak-eng.html"  rel="noopener" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-image-container">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/profile-1.png" alt="Taufik as a Photographer" class="hero-image active"/>
+            <img src="assets/images/profile-2.png" alt="Taufik as a Retoucher" class="hero-image" />
+            <img src="assets/images/profile-3.png" alt="Taufik as a Designer" class="hero-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="portfolio">
+    <div class="portfolio-container">
+        <div class="portfolio-header">
+            <h2>Project Collection</h2>
+            <p>A collection of visual works in the form of photos, videos, and design.</p>
+        </div>
+        <div class="portfolio-content">
+            <div class="portfolio-slider-wrapper animate-slide-in-left">
+                <div class="portfolio-blob"></div>
+                <div class="swiper portfolio-swiper">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide">
+                            <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project 1">
+                            <div class="slide-options-overlay">
+                                <a href="portofolio-eng.html" class="overlay-button view-project-btn" title="View Project"  rel="noopener">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                                <button class="overlay-button view-image-btn" title="View Image">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project 2">
+                             <div class="slide-options-overlay">
+                                <a href="portofolio-eng.html" class="overlay-button view-project-btn" title="View Project"  rel="noopener">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                                <button class="overlay-button view-image-btn" title="View Image">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://images.pexels.com/photos/1269968/pexels-photo-1269968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project 3">
+                             <div class="slide-options-overlay">
+                                <a href="portofolio-eng.html" class="overlay-button view-project-btn" title="View Project"  rel="noopener">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                                <button class="overlay-button view-image-btn" title="View Image">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <div class="portfolio-text-content animate-slide-in-right">
+                <h3 id="portfolio-title"></h3>
+                <p id="portfolio-description"></p>
+                <a href="portofolio-eng.html" class="portfolio-view-all">VIEW ALL PROJECT <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <div class="stat-number" data-target="5">0+</div>
+            <p class="stat-label">Years of Experience</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="99">0+</div>
+            <p class="stat-label">Projects Completed</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="20">0+</div>
+            <p class="stat-label">Satisfied Clients</p>
+        </div>
+    </div>
+</section>
+<section id="about" class="about-section">
+    <div class="about-container">
+        <!-- Left Column: Profile Photo -->
+        <div class="about-photo-wrapper animate-zoom-in">
+            <img src="https://images.pexels.com/photos/3771836/pexels-photo-3771836.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Taufik's Profile Photo">
+        </div>
+
+        <!-- Right Column: Text Description -->
+        <div class="about-text-wrapper animate-zoom-in">
+            <h2>A Little About Me</h2>
+            <p>
+                Hi! I'm Taufik, a creative professional passionate about capturing moments and creating visuals that tell a story. With years of experience in the world of photography and design, I am dedicated to delivering high-quality results that are not only aesthetically beautiful but also meaningful.
+            </p>
+            <a href="about-eng.html" class="btn btn-outline">More About Me</a>
+        </div>
+    </div>
+</section>
+
+<!-- HOW I WORK SECTION -->
+
+<section id="process" class="process-section">
+    <div class="section-container">
+        <div class="portfolio-header">
+            <h2>How I Work</h2>
+            <p>Every great project begins with a well-structured process.</p>
+        </div>
+
+        <!-- Process Line (Desktop Only) -->
+        <div class="process-line-container-desktop">
+            <svg class="process-line" width="100%" height="100%" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                <path id="process-line-path-desktop" d="M50,50 C200,90 250,10 450,50 C650,90 700,10 950,50" stroke-dasharray="10,10" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </svg>
+        </div>
+        
+        <!-- Process Line (Mobile Only) -->
+        <div class="process-line-container-mobile">
+            <svg class="process-line-mobile" height="100%" width="100%">
+                 <path id="process-line-path-mobile" d="M 25 0 V 1000" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <div class="process-grid">
+            <!-- Process 1 -->
+            <div class="process-item animate-slide-up">
+                <div class="process-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <h3><span>01</span>Discussion & Concept</h3>
+                <p>We start with an in-depth discussion to understand your vision and goals, then design the right creative strategy.</p>
+            </div>
+
+            <!-- Process 2 -->
+            <div class="process-item animate-slide-down">
+                <div class="process-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18.5 2.5.9.9 2.5 2.5.9.9v9.2l-.9.9-2.5 2.5-.9.9H4.5l-.9-.9-2.5-2.5-.9-.9V6.9l.9-.9 2.5-2.5.9-.9h14z"></path><path d="m18.5 2.5-12 12"></path><path d="m12 17 5.5-5.5"></path></svg>
+                </div>
+                <h3><span>02</span>Execution & Design</h3>
+                <p>I will begin the creative process, whether it's photography, retouching, or design, with regular updates to you.</p>
+            </div>
+
+            <!-- Process 3 -->
+            <div class="process-item animate-slide-up">
+                <div class="process-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 2H8.6c-.4 0-.8.2-1.1.5-.3.3-.5.7-.5 1.1V21c0 .4.2.8.5 1.1.3.3.7.5 1.1.5h7.8c.4 0 .8-.2 1.1-.5.3-.3.5-.7.5-1.1V6.5L15.5 2z"></path><path d="M15 2v5h5"></path><path d="m10 16-2-2 2-2"></path><path d="m14 16 2-2-2-2"></path></svg>
+                </div>
+                <h3><span>03</span>Revision & Finalization</h3>
+                <p>You will review the results. We'll make revisions if necessary until you are 100% satisfied with the final outcome.</p>
+            </div>
+
+            <!-- Process 4 -->
+            <div class="process-item animate-slide-down">
+                <div class="process-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"></path><polyline points="17 8 21 12 17 16"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                </div>
+                <h3><span>04</span>Delivery & Support</h3>
+                <p>Once everything is complete, I will deliver all the final high-quality files to you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--  SECTION LAYANAN  -->
+
+<section id="services" class="services-radial-section">
+    <div class="section-container">
+        <div class="portfolio-header animate-slide-down">
+            <h2>What I Do</h2>
+            <p>I offer a variety of creative services to bring your ideas to life.</p>
+        </div>
+
+        <div class="radial-selector-container animate-zoom-in">
+            <div class="radial-center">
+                <div class="radial-image-wrapper">
+                    <img id="radial-service-image" src="https://images.pexels.com/photos/225157/pexels-photo-225157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Visual Services">
+                </div>
+                <div class="radial-orbit">
+                    <button class="orbit-icon active" data-service="0" title="Photography">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    </button>
+                    <button class="orbit-icon" data-service="1" title="Retouching">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12a2.2 2.2 0 0 0-2-2l-7-7a2.2 2.2 0 0 0-3 0l-7 7a2.2 2.2 0 0 0 0 3l7 7a2.2 2.2 0 0 0 3 0l7-7a2.2 2.2 0 0 0 2-2z"></path><path d="m22 12-4.6-4.6"></path><path d="M12 22 7.4 17.4"></path><path d="m17.4 7.4-4.6 4.6"></path><path d="M2 12h2.8"></path><path d="M19.2 12h2.8"></path><path d="M12 2v2.8"></path><path d="M12 19.2V22"></path></svg>
+                    </button>
+                    <button class="orbit-icon" data-service="2" title="Videography">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                    </button>
+                    <button class="orbit-icon" data-service="3" title="UI/UX Design">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="radial-text-content">
+                <h3 id="radial-service-title">Photography</h3>
+                <p id="radial-service-description">Capturing moments with visual quality and artistic storytelling.</p>
+                <a href="portofolio-eng.html" id="radial-service-link" class="btn btn-outline">View Details</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="testimonial-text-section">
+    <div class="section-container">
+        <div class="portfolio-header animate-slide-down">
+            <h2>Client Testimonials</h2>
+            <p>What they say about collaborating with me.</p>
+        </div>
+
+        <div class="testimonial-slider-container animate-zoom-in">
+            <div class="swiper testimonial-text-swiper">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <div class="testimonial-text-card">
+                            <p class="quote">"The results exceeded expectations. Taufik is very professional, communicative, and truly understands the vision we wanted to achieve. Highly recommended!"</p>
+                            <div class="author-details">
+                                <span class="author-name">Charlie & Janice</span>
+                                <span class="author-meta">Wedding Photography Package • Sep 2025</span>
+                            </div>
+                            <a href="layanan-eng.html" class="view-testimonial-link">View Testimonial Details →</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-text-card">
+                            <p class="quote">"The retouching process was very detailed and the results were natural. Communication was smooth from the beginning to the end of the project. Thank you very much!"</p>
+                            <div class="author-details">
+                                <span class="author-name">Luthfi & Syafira</span>
+                                <span class="author-meta">Retouching Service • Aug 2025</span>
+                            </div>
+                             <a href="layanan-eng.html" class="view-testimonial-link">View Testimonial Details →</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-text-card">
+                            <p class="quote">"The website design is very modern and aligns with our brand identity. The work was fast and the results were very satisfying."</p>
+                            <div class="author-details">
+                                <span class="author-name">Doni Firmansyah</span>
+                                <span class="author-meta">UI/UX Design Package • Jul 2025</span>
+                            </div>
+                             <a href="layanan-eng.html" class="view-testimonial-link">View Testimonial Details →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="testimonial-text-card">
+                            <p class="quote">"Very satisfied with the video results. The quality is cinematic and the storytelling is strong. Will work together again on the next project."</p>
+                            <div class="author-details">
+                                <span class="author-name">Budi Santoso</span>
+                                <span class="author-meta">Videography Package • Jul 2025</span>
+                            </div>
+                             <a href="layanan-eng.html" class="view-testimonial-link">View Testimonial Details →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-button-prev testimonial-text-prev"></div>
+            <div class="swiper-button-next testimonial-text-next"></div>
+            
+            <div class="swiper-pagination testimonial-text-pagination"></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="journal-section" id="journal">
+      <div class="journal-container">
+        <div class="journal-header animate-zoom-in">
+          <h2>From My Journal</h2>
+          <p>A few recent writings and stories from my creative journey.</p>
+        </div>
+
+        <div class="journal-content">
+          <a href="file:///D:/A%20Taufik%20FGR@Rimendi/Belajar/My%20Profile/01%20On%20Progres/jurnal-detail.html?id=teknik-fotografi-cahaya-minim" class="featured-post-link animate-zoom-in">
+            <div class="featured-post">
+              <div class="featured-post-thumbnail">
+                <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="The Importance of Personal Branding">
+              </div>
+              <div class="featured-post-content">
+                <span class="post-category">photography</span>
+                <h3>Photography Techniques in Low Light Conditions</h3>
+                <p>Photography in low light conditions is one of the biggest challenges for photographers...</p>
+                <div class="featured-post-footer">
+                  <span class="post-meta">July 13, 2025 · 5 min read</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <hr class="animate-zoom-in">
+
+          <div class="post-list">
+            <a href="file:///D:/A%20Taufik%20FGR@Rimendi/Belajar/My%20Profile/01%20On%20Progres/jurnal-detail.html?id=memahami-retouching-frekuensi-separasi" class="post-item animate-directional-y">
+              <h4>Understanding Retouching with Frequency Separation</h4>
+              <span class="post-meta">August 10, 2025</span>
+            </a>
+            <a href="file:///D:/A%20Taufik%20FGR@Rimendi/Belajar/My%20Profile/01%20On%20Progres/jurnal-detail.html?id=revolusi-desain-dengan-ai" class="post-item animate-directional-y">
+              <h4>The Graphic Design Revolution with AI Assistance</h4>
+              <span class="post-meta">August 22, 2025</span>
+            </a>
+            <a href="file:///D:/A%20Taufik%20FGR@Rimendi/Belajar/My%20Profile/01%20On%20Progres/jurnal-detail.html?id=color-grading-untuk-film-pendek" class="post-item animate-directional-y">
+              <h4>The Basics of Color Grading for Short Films</h4>
+              <span class="post-meta">August 15, 2025</span>
+            </a>
+          </div>
+
+          <div class="journal-footer animate-zoom-in">
+               <a href="jurnal.html" class="btn btn-outline">
+                 <span>View All Posts -></span>
+                 </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<section class="faq-section" id="faq">
+      <div class="faq-container">
+        <div class="faq-header animate-zoom-in">
+          <h2>Frequently Asked Questions</h2>
+          <p>Find quick answers to common questions about my services and workflow.</p>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-item animate-directional-y">
+            <button class="accordion-header">
+              <span>What is the process of working with you?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="accordion-icon"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+            <div class="accordion-content">
+              <p>The process begins with a consultation to understand your needs, followed by the submission of a proposal and a quote. After an agreement is reached, we will move to the project execution phase with regular communication until the project is completed and delivered.</p>
+            </div>
+          </div>
+          <div class="accordion-item animate-directional-y">
+            <button class="accordion-header">
+              <span>How long does a project take to complete?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="accordion-icon"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+            <div class="accordion-content">
+              <p>The completion time varies greatly depending on the project's complexity. A logo design project typically takes 1-2 weeks, while a photo retouching project can be completed in a few days. A more accurate time estimate will be provided in the proposal.</p>
+            </div>
+          </div>
+          <div class="accordion-item animate-directional-y">
+            <button class="accordion-header">
+              <span>What payment system do you use?</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="accordion-icon"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+            <div class="accordion-content">
+              <p>For new projects, I usually require a 50% down payment before work begins. The remaining balance is due after the project is completed and before the final files are delivered. I accept payments via bank transfer.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-cta animate-zoom-in">
+          <h3>Still haven't found what you're looking for?</h3>
+          <p>If you can't find what you're looking for in our FAQ, don't worry. You can contact me directly.</p>
+          <a href="#contact" class="btn btn-primary">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+
+
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Enlarged Image View">
+</div>
+
+    
+
+    
+  </main>|
+
+  <footer class="compact-footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-top-row">
+      <h3 class="footer-logo">TAUFIK</h3>
+      <div class="footer-socials">
+        <a href="#" title="Instagram"><img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/instagram-new.png" alt="Instagram"/></a>
+        <a href="#" title="LinkedIn"><img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/linkedin.png" alt="LinkedIn"/></a>
+        <a href="#" title="Behance"><img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/behance.png" alt="Behance"/></a>
+        <a href="#" title="Dribbble"><img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/instagram-new.png" alt="Dribbble"/></a>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom-row">
+      <p class="footer-copyright">© 2025 Taufik. All Rights Reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+</body>
+</html>
