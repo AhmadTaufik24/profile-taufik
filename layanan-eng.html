@@ -1,26 +1,23 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Services</title>
+  <title>Portofolio</title>
 
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#ffffff"/>
-  <meta name="description" content="Taufik's Portfolio Website - Photographer, Retoucher, and Designer."/>
+  <meta name="description" content="Website Portofolio Taufik - Fotografer, Retoucher, dan Desainer."/>
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/layanan.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-  <style>
-    .card-item { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .card-item.is-visible { opacity: 1; transform: translateY(0); }
-</style>
 
 </head>
-<body>
+<body class="page-jurnal">
 
   <header class="navbar">
     <div class="navbar-container">
@@ -28,7 +25,7 @@
 
       <nav class="desktop-nav">
         <ul>
-          <li><a href="index-eng.html" rel="noopener">Home</a></li>
+        <li><a href="index-eng.html" rel="noopener">Home</a></li>
           <li><a href="portofolio-eng.html" rel="noopener">Portfolio</a></li>
           <li><a href="about-eng.html"  rel="noopener">About</a></li>
           <li><a href="layanan-eng.html"  rel="noopener">Services</a></li>
@@ -39,13 +36,15 @@
 
       <div class="navbar-right">
         <div class="toggle-container">
-          <div class="switch-toggle active-left" id="modeToggle" title="Change Mode">
+          <!-- Toggle Mode -->
+          <div class="switch-toggle active-left" id="modeToggle" title="Ubah Mode">
             <img src="https://img.icons8.com/ios-glyphs/30/f0f0f0/moon-symbol.png" alt="moon" class="icon icon-moon"/>
             <img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/sun--v1.png" alt="sun" class="icon icon-sun"/>
             <span class="switch-thumb"></span>
           </div>
 
-          <div class="switch-toggle active-left" id="langToggle" title="Change Language">
+          <!-- Toggle Bahasa -->
+          <div class="switch-toggle active-left" id="langToggle" title="Ganti Bahasa">
             <img src="https://img.icons8.com/emoji/36/indonesia-emoji.png" class="icon icon-id" alt="ID" />
             <img src="https://img.icons8.com/emoji/36/united-kingdom-emoji.png" class="icon icon-uk" alt="UK" />
             <span class="switch-thumb"></span>
@@ -61,10 +60,18 @@
     </div>
   </header>
 
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+     <li><a href="index-eng.html" rel="noopener">Home</a></li>
+          <li><a href="portofolio-eng.html" rel="noopener">Portfolio</a></li>
+          <li><a href="about-eng.html"  rel="noopener">About</a></li>
+          <li><a href="layanan-eng.html"  rel="noopener">Services</a></li>
+          <li><a href="jurnal-eng.html" rel="noopener">Journal</a></li>
+          <li><a href="kontak-eng.html"  rel="noopener">Contact</a></li>
+    </ul>
+  </nav>
 
-
-
-<main>
+ <main>
     <div class="maintenance-container">
 
         <div class="gears-animation">
@@ -77,7 +84,7 @@
             We are working hard to make this page better and full of exciting features. Please be patient and check back again later!
         </p>
 
-        <a href="index.html" class="btn-back-home">
+        <a href="index-eng.html" class="btn-back-home">
             <i class="fa-solid fa-arrow-left"></i> &nbsp; Back to Home
         </a>
 
@@ -100,15 +107,15 @@
       <p class="footer-copyright">© 2025 Taufik. All Rights Reserved.</p>
       <ul class="footer-nav">
         <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#services">services</a></li>
       </ul>
     </div>
   </div>
 </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
   <script src="assets/js/layanan.js"></script>
-
 </body>
 </html>
