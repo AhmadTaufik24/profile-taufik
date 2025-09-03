@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,13 +15,9 @@
   <link rel="stylesheet" href="assets/css/portofolio.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-  <style>
-    .card-item { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .card-item.is-visible { opacity: 1; transform: translateY(0); }
-</style>
 
 </head>
-<body>
+<body class="page-jurnal">
 
   <header class="navbar">
     <div class="navbar-container">
@@ -31,7 +28,7 @@
           <li><a href="index.html" rel="noopener">Beranda</a></li>
           <li><a href="portofolio.html" rel="noopener">Portofolio</a></li>
           <li><a href="about.html"  rel="noopener">Tentang</a></li>
-          <li><a href="layanan.html"  rel="noopener">Layanan</a></li>
+          <li><a href="layanan.html" rel="noopener">Layanan</a></li>
           <li><a href="jurnal.html" rel="noopener">Jurnal</a></li>
           <li><a href="kontak.html"  rel="noopener">Kontak</a></li>
         </ul>
@@ -63,10 +60,18 @@
     </div>
   </header>
 
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html" rel="noopener">Beranda</a></li>
+      <li><a href="portofolio.html" rel="noopener">Portofolio</a></li>
+      <li><a href="about.html"  rel="noopener">Tentang</a></li>
+      <li><a href="layanan.html" rel="noopener">Layanan</a></li>
+      <li><a href="jurnal.html" rel="noopener">Jurnal</a></li>
+      <li><a href="kontak.html"  rel="noopener">Kontak</a></li>
+    </ul>
+  </nav>
 
-
-
-<main>
+ <main>
     <div class="maintenance-container">
 
         <div class="gears-animation">
@@ -85,6 +90,7 @@
 
     </div>
 </main>
+
 
 <footer class="compact-footer" id="contact">
   <div class="footer-container">
@@ -110,7 +116,12 @@
 </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
   <script src="assets/js/portofolio.js"></script>
-
 </body>
 </html>
+
+
+
+
+
