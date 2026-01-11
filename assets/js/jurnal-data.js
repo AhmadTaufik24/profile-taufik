@@ -20,7 +20,8 @@ const journals = [
     category: 'Desain',
     thumbnail: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',
     description: 'Bagaimana alat AI generatif seperti Midjourney dan DALL-E mengubah alur kerja desainer grafis modern.',
-    content: `<p>Kecerdasan Buatan (AI) tidak lagi menjadi konsep masa depan; ia telah menjadi alat yang ampuh dalam dunia desain grafis...</p>`
+    content: `<p> Menurut saya, revolusi desain dengan AI saat ini bukan tentang AI menggantikan desainer, melainkan mengubah cara saya berpikir dan bekerja. AI membantu mempercepat proses, membuka ide baru, dan memangkas pekerjaan teknis yang repetitif, sehingga saya bisa lebih fokus pada konsep, rasa, dan arah visual.
+              Di titik ini, peran desainer bukan lagi sekadar membuat, tetapi memilih, mengarahkan, dan memberi karakter. AI menjadi alat, sementara visi dan kepekaan tetap berasal dari manusia.</p>`
   },
   {
     id: 'color-grading-untuk-film-pendek',
@@ -30,7 +31,8 @@ const journals = [
     category: 'Videography',
     thumbnail: 'https://images.unsplash.com/photo-1574717537220-6d8b63e71789?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',
     description: 'Pelajari perbedaan antara color correction dan color grading, serta cara membangun mood cerita melalui warna.',
-    content: `<p>Warna adalah elemen penceritaan yang kuat dalam sinematografi...</p>`
+    content: `<p>Color grading untuk film pendek bukan sekadar membuat warna terlihat indah, melainkan membangun suasana dan emosi cerita. Warna berperan penting dalam mengarahkan perasaan penonton tanpa harus bergantung pada dialog.
+             Menurut saya, grading yang baik adalah yang terasa konsisten dan relevan dengan cerita. Bukan tentang seberapa kuat warna diubah, tetapi seberapa tepat warna tersebut mendukung narasi dan identitas visual film.</p>`
   },
   {
     id: 'memahami-retouching-frekuensi-separasi',
@@ -40,7 +42,8 @@ const journals = [
     category: 'Retouch',
     thumbnail: 'https://images.unsplash.com/photo-1595152772252-3e3d3b6f0b4a?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',
     description: 'Teknik canggih di Photoshop untuk merapikan tekstur kulit tanpa kehilangan detail alaminya.',
-    content: `<p>Frekuensi Separasi adalah teknik retouching di Photoshop yang memisahkan tekstur kulit...</p>`
+    content: `<p>Memahami retouching frekuensi separasi berarti memisahkan detail dan warna agar proses perbaikan kulit lebih terkontrol dan natural. Teknik ini memungkinkan tekstur tetap terjaga tanpa merusak gradasi warna dan cahaya.
+             Dalam praktik yang saya jalani, frekuensi separasi bukan tentang menghaluskan berlebihan, tetapi menjaga karakter asli subjek. Retouching yang baik seharusnya tidak terlihat, hanya terasa lebih rapi dan seimbang.</p>`
   },
   {
     id: 'membangun-narasi-lewat-sains',
@@ -50,9 +53,11 @@ const journals = [
     category: 'Sains',
     thumbnail: 'https://images.unsplash.com/photo-1532187643623-dbf2673a568c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',
     description: 'Cara menyajikan data dan penemuan ilmiah yang kompleks menjadi cerita visual yang menarik.',
-    content: `<p>Komunikasi sains modern menuntut lebih dari sekadar teks dan grafik...</p>`
+    content: `<p>Membangun narasi lewat sains adalah tentang memahami bagaimana manusia merespons cerita melalui logika, emosi, dan persepsi. Data, pola, dan pemahaman perilaku membantu narasi terasa lebih masuk akal dan berdampak.
+            Dalam proses yang saya pelajari, sains bukan membatasi kreativitas, tetapi memberi struktur agar pesan tersampaikan lebih kuat, relevan, dan mudah diterima audiens.</p>`
   }
 
 ];
+
 
 
