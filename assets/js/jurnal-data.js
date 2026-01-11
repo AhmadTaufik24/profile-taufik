@@ -5,7 +5,7 @@ const journals = [
     id: 'teknik-fotografi-cahaya-minim',
     title: 'Teknik Fotografi dalam Kondisi Cahaya Minim',
     author: 'Taufik',
-    date: '28 Agustus 2025',
+    date: '28 April 2024',
     category: 'Fotografi',
     thumbnail: 'https://images.unsplash.com/photo-1519638831568-d9897f54ed69?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',
     description: 'Menguasai segitiga exposure untuk mendapatkan foto tajam di malam hari tanpa noise berlebih.',
@@ -15,7 +15,7 @@ const journals = [
   {
     id: 'revolusi-desain-dengan-ai',
     title: 'Revolusi Desain Grafis dengan Bantuan AI',
-    author: 'Citra Lestari',
+    author: 'Taufik',
     date: '22 Agustus 2025',
     category: 'Desain',
     thumbnail: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',
@@ -26,8 +26,8 @@ const journals = [
   {
     id: 'color-grading-untuk-film-pendek',
     title: 'Dasar-Dasar Color Grading untuk Film Pendek',
-    author: 'Bayu Wibowo',
-    date: '15 Agustus 2025',
+    author: 'Taufik',
+    date: '15 Juni 2024',
     category: 'Videography',
     thumbnail: 'https://images.unsplash.com/photo-1574717537220-6d8b63e71789?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',
     description: 'Pelajari perbedaan antara color correction dan color grading, serta cara membangun mood cerita melalui warna.',
@@ -37,7 +37,7 @@ const journals = [
   {
     id: 'memahami-retouching-frekuensi-separasi',
     title: 'Memahami Retouching dengan Frekuensi Separasi',
-    author: 'Rina Setiawati',
+    author: 'Taufik',
     date: '10 Agustus 2025',
     category: 'Retouch',
     thumbnail: 'https://images.unsplash.com/photo-1595152772252-3e3d3b6f0b4a?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',
@@ -48,7 +48,7 @@ const journals = [
   {
     id: 'membangun-narasi-lewat-sains',
     title: 'Membangun Narasi Visual dalam Jurnalisme Sains',
-    author: 'Dr. Ilham Akbar',
+    author: 'Taufik',
     date: '05 Agustus 2025',
     category: 'Sains',
     thumbnail: 'https://images.unsplash.com/photo-1532187643623-dbf2673a568c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',
@@ -58,6 +58,7 @@ const journals = [
   }
 
 ];
+
 
 
 
