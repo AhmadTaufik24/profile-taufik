@@ -9,9 +9,11 @@ const journals = [
     category: 'Fotografi',
     thumbnail: 'https://images.unsplash.com/photo-1519638831568-d9897f54ed69?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',
     description: 'Menguasai segitiga exposure untuk mendapatkan foto tajam di malam hari tanpa noise berlebih.',
-    content: `<pCahaya adalah elemen utama dalam fotografi. Pada siang hari, kamera bekerja relatif ringan karena cahaya melimpah. Namun di malam hari, fotografer dipaksa membuat kompromi: menaikkan ISO, membuka aperture, atau memperlambat shutter speed.<br>
-    Kesalahan dalam memilih satu elemen saja dapat berakibat fatal, seperti noise kasar, foto goyang, atau area fokus yang meleset.
-    Banyak fotografer pemula mengandalkan ISO tinggi sebagai solusi instan, padahal pendekatan ini sering menghasilkan foto yang terlihat “pecah”. Oleh karena itu, pemahaman segitiga exposure secara menyeluruh menjadi kunci utama fotografi malam yang berkualitas.</p>`
+    content: `<p> Fotografi malam hari menuntut kontrol exposure yang tepat agar foto tetap tajam dan bersih. Kunci utamanya terletak pada keseimbangan segitiga exposure: ISO, aperture, dan shutter speed.
+    ISO sebaiknya dijaga serendah mungkin karena ISO tinggi akan memunculkan noise dan mengurangi detail. Gunakan ISO hanya jika aperture dan shutter speed sudah berada di batas aman. Aperture membantu memasukkan cahaya, namun bukaan terlalu besar dapat mengurangi ketajaman dan membuat fokus mudah meleset. Bukaan menengah sering kali memberi hasil paling stabil.
+    Shutter speed adalah penentu utama ketajaman. Kecepatan yang terlalu lambat akan menyebabkan blur, meskipun exposure terlihat cukup terang. Menentukan shutter speed sesuai kondisi gerak subjek jauh lebih penting dibanding sekadar mengejar foto terang.
+    Dengan membagi beban exposure secara seimbang dan memanfaatkan cahaya sekitar, fotografer dapat menghasilkan foto malam yang tajam, minim noise, dan tetap natural tanpa bergantung pada editing berlebihan.
+    </p>`
   },
   {
     id: 'revolusi-desain-dengan-ai',
@@ -55,3 +57,4 @@ const journals = [
   }
 
 ];
+
