@@ -4,12 +4,14 @@ const journals = [
   {
     id: 'teknik-fotografi-cahaya-minim',
     title: 'Teknik Fotografi dalam Kondisi Cahaya Minim',
-    author: 'Andi Pratama',
+    author: 'Taufik',
     date: '28 Agustus 2025',
     category: 'Fotografi',
     thumbnail: 'https://images.unsplash.com/photo-1519638831568-d9897f54ed69?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600',
     description: 'Menguasai segitiga exposure untuk mendapatkan foto tajam di malam hari tanpa noise berlebih.',
-    content: `<p>Fotografi dalam kondisi cahaya minim atau <i>low light</i> adalah salah satu tantangan terbesar bagi fotografer...</p>`
+    content: `<pCahaya adalah elemen utama dalam fotografi. Pada siang hari, kamera bekerja relatif ringan karena cahaya melimpah. Namun di malam hari, fotografer dipaksa membuat kompromi: menaikkan ISO, membuka aperture, atau memperlambat shutter speed.<br>
+    Kesalahan dalam memilih satu elemen saja dapat berakibat fatal, seperti noise kasar, foto goyang, atau area fokus yang meleset.
+    Banyak fotografer pemula mengandalkan ISO tinggi sebagai solusi instan, padahal pendekatan ini sering menghasilkan foto yang terlihat “pecah”. Oleh karena itu, pemahaman segitiga exposure secara menyeluruh menjadi kunci utama fotografi malam yang berkualitas.</p>`
   },
   {
     id: 'revolusi-desain-dengan-ai',
@@ -51,4 +53,5 @@ const journals = [
     description: 'Cara menyajikan data dan penemuan ilmiah yang kompleks menjadi cerita visual yang menarik.',
     content: `<p>Komunikasi sains modern menuntut lebih dari sekadar teks dan grafik...</p>`
   }
+
 ];
