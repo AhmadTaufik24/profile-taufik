@@ -1,106 +1,465 @@
+/* ========================================= */
+/* ===    FILE: assets/css/portfolio.css === */
+/* ========================================= */
 
-/*  HALAMAN DALAM PERBAIKAN (MAINTENANCE) */
-
-
-/* --- Kontainer Utama --- */
-.maintenance-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* --- 1. CONTAINER UTAMA --- */
+.photo-section {
+    padding: 80px 20px;
+    background-color: var(--bg-color); /* Mengikuti tema web Anda */
     text-align: center;
-    min-height: calc(100vh - 150px); /* Tinggi layar dikurangi header & footer */
-    padding: 80px 40px;
-    overflow: hidden;
 }
 
-/* --- Animasi Roda Gigi --- */
-.gears-animation {
-    position: relative;
-    width: 150px;
-    height: 100px;
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
     margin-bottom: 40px;
 }
 
-.gears-animation .fa-gear {
-    position: absolute;
-    opacity: 0.7;
-    transition: color 0.4s ease;
+/* --- 2. TAB UTAMA (Studio vs Outdoor) --- */
+.photo-tabs-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.gear-one {
-    font-size: 100px;
-    color: var(--highlight-color);
-    top: 0;
-    left: 0;
-    animation: spin 10s linear infinite;
-}
-
-.gear-two {
-    font-size: 50px;
-    color: var(--text-color);
-    top: 55px;
-    left: 75px;
-    animation: spin-reverse 10s linear infinite;
-}
-
-/* --- Teks Informasi --- */
-.maintenance-title {
-    font-size: 2.2rem;
+.photo-tab-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 15px;
-    color: var(--text-color);
+    background: none;
+    border: none;
+    color: #ccc; /* Warna tidak aktif */
+    cursor: pointer;
+    padding-bottom: 10px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.maintenance-text {
-    font-size: 1.1rem;
-    max-width: 550px;
-    opacity: 0.6;
-    line-height: 1.7;
+.photo-tab-btn.active {
+    color: var(--highlight-color); /* Warna Biru */
+}
+
+/* Garis bawah biru saat aktif */
+.photo-tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -11px; /* Nempel garis border */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--highlight-color);
+}
+
+/* --- 3. WRAPPER PANEL (AGAR KONTEN DI TENGAH) --- */
+/* Ini kunci agar foto tidak melebar ke samping */
+.photo-panels-wrapper {
+    max-width: 1100px; /* Batas lebar maksimal */
+    margin: 0 auto;    /* Posisi tengah */
+    position: relative;
+}
+
+/* Efek Fade In saat ganti tab */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 4. FILTER KECIL (Pill Buttons) --- */
+.mini-filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 30px;
-    color: var(--text-color);
+    flex-wrap: wrap;
 }
 
-/* --- Tombol Kembali --- */
-.btn-back-home {
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 24px;
-    border: 1px solid var(--navbar-border);
-    border-radius: 8px;
-    background-color: var(--btn-secondary-bg);
-    color: var(--text-color);
+.filter-pill {
+    padding: 8px 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    background: transparent;
+    color: #555;
+    cursor: pointer;
+    font-size: 0.9rem;
     font-weight: 500;
-    text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.btn-back-home:hover {
+.filter-pill:hover,
+.filter-pill.active {
     background-color: var(--highlight-color);
-    border-color: var(--highlight-color);
     color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(93, 155, 214, 0.2);
+    border-color: var(--highlight-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* --- Keyframes untuk Animasi Putaran --- */
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+/* --- 5. GRID FOTO (KECIL & BANYAK) --- */
+.photo-grid {
+    display: grid;
+    gap: 15px; /* Jarak antar foto */
+    margin-bottom: 40px;
+    justify-content: center;
 }
 
-@keyframes spin-reverse {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(-360deg); }
+/* Layout Studio: Foto Tegak (Portrait) & Kecil */
+.studio-layout {
+    /* Lebar min 150px agar muat banyak */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.studio-layout .photo-item {
+    aspect-ratio: 4/5;
 }
 
-/* Penyesuaian untuk Mobile */
+/* Layout Outdoor: Foto Lebar (Landscape) */
+.outdoor-layout {
+    /* Lebar min 200px */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.outdoor-layout .photo-item {
+    aspect-ratio: 3/2;
+}
+
+/* --- 6. ITEM FOTO --- */
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #eee; /* Placeholder warna */
+    transition: transform 0.3s ease;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Efek Hover: Zoom Gambar */
+.photo-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Gelap & Ikon saat Hover */
+.item-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-item:hover .item-overlay {
+    opacity: 1;
+}
+
+.item-overlay i {
+    color: #fff;
+    font-size: 1.5rem;
+    transform: scale(0.8);
+    transition: transform 0.3s;
+}
+
+.photo-item:hover .item-overlay i {
+    transform: scale(1);
+}
+
+/* --- 7. PAGINATION (TOMBOL NEXT/PREV) --- */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.page-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-btn:hover:not(:disabled) {
+    background-color: var(--highlight-color);
+    color: #fff;
+    border-color: var(--highlight-color);
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f9f9f9;
+}
+
+.page-info {
+    font-weight: 600;
+    color: #777;
+    font-size: 0.95rem;
+}
+
+/* --- 8. LIGHTBOX (POPUP) --- */
+.lightbox {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999; /* Paling atas */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lightbox.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.lightbox-close:hover {
+    transform: rotate(90deg);
+}
+
+/* --- 9. MEDIA QUERY (HP) --- */
 @media (max-width: 768px) {
-    .maintenance-title {
-        font-size: 1.8rem;
+    .photo-section {
+        padding: 60px 15px;
     }
-    .maintenance-text {
-        font-size: 1rem;
+    
+    .photo-panels-wrapper {
+        width: 100%; /* Full width di HP */
     }
 
+    /* Scroll Horizontal untuk Filter */
+    .mini-filter {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+    }
+    
+    /* Grid 2 kolom di HP */
+    .studio-layout, .outdoor-layout {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+    }
+    
+    .pagination-controls {
+        gap: 10px;
+    }
+    
+    .page-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+}
+/* ============================================================
+   CSS FINAL: SECTION RETOUCH (JUMBO TEXT & ADAPTIVE DARK MODE)
+   ============================================================ */
+
+/* 1. SISTEM WARNA (ADAPTIF) */
+:root {
+    /* Mode Terang (Default) */
+    --retouch-bg: #f8f9fa;
+    --retouch-text-h: #1a1a1a;
+    --retouch-text-p: #666666;
+    --retouch-card-bg: #ffffff;
+    --retouch-border: #e0e0e0;
+    --highlight-color: #3498db; /* Warna biru handle */
+}
+
+/* Aktif saat <body class="dark-mode"> */
+body.dark-mode {
+    --retouch-bg: #111111;
+    --retouch-text-h: #ffffff;
+    --retouch-text-p: #aaaaaa;
+    --retouch-card-bg: #1a1a1a;
+    --retouch-border: #333333;
+}
+
+/* 2. AREA SECTION */
+.retouch-section {
+    padding: 100px 20px;
+    background-color: var(--retouch-bg);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* 3. JUDUL JUMBO (TEKS RETOUCHING) */
+#sec-retouch .section-title {
+    font-size: 6rem;           /* Ukuran Super Besar */
+    font-weight: 900;          /* Paling Tebal */
+    color: var(--retouch-text-h);
+    text-transform: uppercase;
+    letter-spacing: -3px;      /* Jarak huruf rapat (modern) */
+    line-height: 0.9;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+#sec-retouch .section-subtitle {
+    font-size: 1.3rem;
+    color: var(--retouch-text-p);
+    margin-bottom: 50px;
+}
+
+/* 4. SLIDER VIEWER (KOTAK FOTO) */
+.retouch-compact-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.retouch-viewer-wrapper {
+    width: 100%;
+    max-width: 450px;
+    height: 550px;
+    margin: 0 auto 40px;
+    position: relative;
+    background: var(--retouch-card-bg);
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    overflow: hidden;
+    user-select: none;
+    touch-action: none; /* Anti-goyang di HP */
+}
+
+/* TOMBOL ZOOM (POJOK KANAN ATAS) */
+.btn-expand {
+    position: absolute;
+    top: 15px; right: 15px;
+    z-index: 100;
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.7);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: 0.3s;
+}
+.btn-expand:hover { background: var(--highlight-color); transform: scale(1.1); }
+
+/* SLIDER LAYERS */
+.ba-slider { position: relative; width: 100%; height: 100%; cursor: ew-resize; }
+.ba-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+.ba-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.ba-image.after { width: 50%; z-index: 20; border-right: 3px solid #fff; }
+.ba-image.before { z-index: 10; }
+
+/* LABEL (DI BAWAH) */
+.ba-label {
+    position: absolute; bottom: 25px;
+    background: rgba(0,0,0,0.7); color: #fff;
+    padding: 6px 14px; font-size: 0.75rem; font-weight: 800;
+    text-transform: uppercase; border-radius: 4px; pointer-events: none;
+}
+.label-after { left: 25px; z-index: 30; }
+.label-before { right: 25px; z-index: 30; }
+
+/* HANDLE PENGGESER */
+.ba-handle {
+    position: absolute; top: 0; bottom: 0; left: 50%;
+    width: 40px; transform: translateX(-50%); z-index: 40;
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: none;
+}
+.handle-circle {
+    width: 48px; height: 48px;
+    background: var(--highlight-color);
+    border: 3px solid #fff; border-radius: 50%; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    pointer-events: auto;
+}
+
+/* 5. THUMBNAILS & NAVIGASI */
+.retouch-controls {
+    display: flex; align-items: center; justify-content: center; gap: 15px;
+    max-width: 600px; margin: 0 auto;
+}
+
+.thumbnail-track {
+    display: flex; gap: 12px; max-width: 400px;
+    overflow-x: auto; scroll-behavior: smooth;
+    padding: 10px 5px; scrollbar-width: none;
+}
+.thumbnail-track::-webkit-scrollbar { display: none; }
+
+.thumb-item {
+    width: 65px; height: 65px; flex-shrink: 0;
+    border-radius: 10px; overflow: hidden;
+    cursor: pointer; border: 2px solid transparent;
+    opacity: 0.5; transition: 0.3s ease;
+}
+.thumb-item img { width: 100%; height: 100%; object-fit: cover; }
+.thumb-item.active { opacity: 1; border-color: var(--highlight-color); transform: scale(1.1); }
+
+.nav-btn {
+    width: 45px; height: 45px; border-radius: 50%;
+    border: 1px solid var(--retouch-border);
+    background: var(--retouch-card-bg);
+    color: var(--retouch-text-h);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.nav-btn:hover:not(:disabled) { background: var(--highlight-color); color: #fff; }
+
+/* 6. FULLSCREEN MODE */
+.retouch-viewer-wrapper.fullscreen-active {
+    position: fixed; top: 0; left: 0;
+    width: 100vw !important; height: 100vh !important;
+    max-width: none !important; z-index: 9999;
+    background: #000; border-radius: 0;
+}
+.retouch-viewer-wrapper.fullscreen-active .ba-image img { object-fit: contain; }
+
+/* RESPONSIVE KHUSUS JUDUL */
+@media (max-width: 768px) {
+    #sec-retouch .section-title { font-size: 3.5rem; letter-spacing: -1px; }
+    .retouch-viewer-wrapper { height: 450px; }
 }
