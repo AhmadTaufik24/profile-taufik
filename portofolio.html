@@ -11,8 +11,8 @@
   <meta name="description" content="Website Portofolio Taufik - Fotografer, Retoucher, dan Desainer."/>
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/portfofolio.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/portofolio.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
 
@@ -72,24 +72,260 @@
   </nav>
 
  <main>
-    <div class="maintenance-container">
-
-        <div class="gears-animation">
-            <i class="fa-solid fa-gear gear-one"></i>
-            <i class="fa-solid fa-gear gear-two"></i>
+<section id="photography-section" class="photo-section">
+    <div class="container">
+        
+        <div class="section-header">
+            <h2 class="section-title">Photography</h2>
+            <p class="section-subtitle">Galeri Studio & Outdoor</p>
         </div>
 
-        <h2 class="maintenance-title">Mohon maaf Halaman Sedang Dalam Perbaikan</h2>
-        <p class="maintenance-text">
-            Kami sedang bekerja keras untuk membuat halaman ini menjadi lebih baik dan penuh fitur menarik. Mohon bersabar dan silakan kembali lagi nanti!
-        </p>
+        <div class="photo-tabs-wrapper">
+            <button class="photo-tab-btn active" onclick="openPhotoTab('studio')">Studio</button>
+            <button class="photo-tab-btn" onclick="openPhotoTab('outdoor')">Outdoor</button>
+        </div>
 
-        <a href=" https://ahmadtaufik24.github.io/ahtapotraid.id/ " class="btn-back-home">
-            <i class="fa-solid fa-arrow-left"></i> &nbsp; lihat portofolio sementara ->
-        </a>
+        <div class="photo-panels-wrapper">
 
+            <div id="panel-studio" class="photo-panel active fade-in">
+                
+                <div class="mini-filter">
+                    <button class="filter-pill active" onclick="setFilter(this, 'all')">All</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'family')">Family</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'beauty')">Beauty</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'prewedding')">Prewedding</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'kids')">Kids</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'maternity')">Maternity</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'profile')">Profile</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'food')">Food</button>
+                </div>
+
+                <div class="photo-grid studio-layout" id="grid-studio">
+                    <div class="photo-item" data-cat="family"><img src="assets/images/001-family" alt="Family"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="beauty"><img src="assets/images/001-beauty" alt="Beauty"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="prewedding"><img src="assets/images/001-prewedding" alt="Prewedding"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="kids"><img src="assets/images/001-kids" alt="Kids"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="maternity"><img src="assets/images/001-maternity" alt="Maternity"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    
+                    <div class="photo-item" data-cat="profile"><img src="assets/images/001-profile" alt="Profile"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="food"><img src="assets/images/001-food" alt="Food"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="beauty"><img src="assets/images/002-beauty" alt="Beauty"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="family"><img src="assets/images/002-family" alt="Family"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="kids"><img src="assets/images/002-kids" alt="Kids"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+
+                    <div class="photo-item" data-cat="prewedding"><img src="assets/images/002-prewedding" alt="Prewedding"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="family"><img src="assets/images/003-family" alt="Family"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="food"><img src="assets/images/002-food" alt="Food"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="beauty"><img src="assets/images/003-beauty" alt="Beauty"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="profile"><img src="assets/images/002-profile" alt="Profile"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+
+                    <div class="photo-item" data-cat="food"><img src="assets/images/003-food" alt="Food"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="beauty"><img src="assets/images/004-Beauty" alt="Beauty"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="maternity"><img src="assets/images/002-maternity" alt="Maternity"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+
+                    <div class="photo-item" data-cat="family"><img src="assets/images/003-family" alt="Family"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="beauty"><img src="assets/images/004-beauty" alt="Beauty"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="prewedding"><img src="assets/images/003-prewedding" alt="Prewedding"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="kids"><img src="assets/images/003-kids" alt="Kids"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="maternity"><img src="assets/images/003-maternity" alt="Maternity"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    
+                    <div class="photo-item" data-cat="profile"><img src="assets/images/003-profile" alt="Profile"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="food"><img src="assets/images/004-food" alt="Food"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="beauty"><img src="assets/images/005-beauty" alt="Beauty"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="family"><img src="assets/images/004-family" alt="Family"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="kids"><img src="assets/images/004-kids" alt="Kids"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+
+                    <div class="photo-item" data-cat="prewedding"><img src="assets/images/004-prewedding" alt="Prewedding"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="family"><img src="assets/images/005-family" alt="Family"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="food"><img src="assets/images/005-food" alt="Food"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="beauty"><img src="assets/images/006-beauty" alt="Beauty"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="profile"><img src="assets/images/004-profile" alt="Profile"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+
+                    <div class="photo-item" data-cat="food"><img src="assets/images/006-food" alt="Food"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="beauty"><img src="assets/images/007-Beauty" alt="Beauty"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="maternity"><img src="assets/images/004-maternity" alt="Maternity"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+
+                    
+                    
+
+                    
+                    
+                    
+                </div>
+
+                <div class="pagination-controls" id="pagination-studio">
+                    <button class="page-btn prev-btn" onclick="changePage('studio', -1)"><i class="fa-solid fa-chevron-left"></i> Prev</button>
+                    <span class="page-info">Page 1</span>
+                    <button class="page-btn next-btn" onclick="changePage('studio', 1)">Next <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div id="panel-outdoor" class="photo-panel fade-in" style="display:none;">
+                
+                <div class="mini-filter">
+                    <button class="filter-pill active" onclick="setFilter(this, 'all')">All</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'wedding')">Wedding</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'birthday')">Birthday</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'prewedding')">Prewedding</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'kids')">Kids</button>
+                    <button class="filter-pill" onclick="setFilter(this, 'maternity')">Maternity</button>
+                </div>
+
+                <div class="photo-grid outdoor-layout" id="grid-outdoor">
+                    <div class="photo-item" data-cat="wedding"><img src="https://images.pexels.com/photos/3352398/pexels-photo-3352398.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Wedding"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="birthday"><img src="https://images.pexels.com/photos/1543895/pexels-photo-1543895.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Birthday"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="prewedding"><img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Prewedding"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="kids"><img src="https://images.pexels.com/photos/1149832/pexels-photo-1149832.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Kids"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="maternity"><img src="https://images.pexels.com/photos/3662828/pexels-photo-3662828.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Maternity"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    
+                    <div class="photo-item" data-cat="wedding"><img src="https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Wedding"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    <div class="photo-item" data-cat="birthday"><img src="https://images.pexels.com/photos/1684187/pexels-photo-1684187.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Birthday"><div class="item-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+                    </div>
+
+                <div class="pagination-controls" id="pagination-outdoor">
+                    <button class="page-btn prev-btn" onclick="changePage('outdoor', -1)"><i class="fa-solid fa-chevron-left"></i> Prev</button>
+                    <span class="page-info">Page 1</span>
+                    <button class="page-btn next-btn" onclick="changePage('outdoor', 1)">Next <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+        </div>
     </div>
+</section>
+
+<div id="photo-lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img src="" id="lightbox-img" alt="Full Preview">
+</div>
+
+<section id="sec-retouch" class="retouch-section">
+    <div class="container">
+        
+        <div class="section-header">
+            <h2>Retouching</h2>
+            <p>Geser garis untuk melihat perbandingan Before & After</p>
+        </div>
+
+        <div class="retouch-compact-wrapper">
+            
+            <div class="retouch-viewer-wrapper" id="retouch-viewer">
+                
+                <button type="button" class="btn-expand" onclick="toggleRetouchFullscreen()">
+                    <i class="fa-solid fa-expand" id="icon-expand"></i>
+                </button>
+
+                <div class="ba-slider" id="ba-slider-area">
+                    
+                    <div class="ba-image after" id="container-after">
+                        <img id="img-after" src="https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=800" draggable="false" alt="After">
+                        <span class="ba-label label-after">After</span>
+                    </div>
+                    
+                    <div class="ba-image before">
+                        <img id="img-before" src="https://images.pexels.com/photos/2613259/pexels-photo-2613259.jpeg?auto=compress&cs=tinysrgb&w=800" draggable="false" alt="Before">
+                        <span class="ba-label label-before">Before</span>
+                    </div>
+
+                    <div class="ba-handle" id="slider-handle">
+                        <div class="handle-circle"><i class="fa-solid fa-arrows-left-right"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="retouch-controls">
+                <button class="nav-btn prev-btn" id="btn-prev-retouch" onclick="changeRetouchSlide(-1)">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="thumbnail-track">
+                    
+                    <div class="thumb-item active" onclick="selectRetouch(0)" 
+                         data-before="https://images.pexels.com/photos/2613259/pexels-photo-2613259.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+
+                    <div class="thumb-item" onclick="selectRetouch(1)" 
+                         data-before="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+
+                    <div class="thumb-item" onclick="selectRetouch(2)" 
+                         data-before="https://images.pexels.com/photos/2113855/pexels-photo-2113855.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/2113994/pexels-photo-2113994.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/2113994/pexels-photo-2113994.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+
+                    <div class="thumb-item" onclick="selectRetouch(3)" 
+                         data-before="https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+
+                     
+                    <div class="thumb-item active" onclick="selectRetouch(0)" 
+                         data-before="https://images.pexels.com/photos/2613259/pexels-photo-2613259.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+
+                    <div class="thumb-item" onclick="selectRetouch(1)" 
+                         data-before="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+
+                    <div class="thumb-item" onclick="selectRetouch(2)" 
+                         data-before="https://images.pexels.com/photos/2113855/pexels-photo-2113855.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/2113994/pexels-photo-2113994.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/2113994/pexels-photo-2113994.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+
+                    <div class="thumb-item" onclick="selectRetouch(3)" 
+                         data-before="https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+                     
+                    <div class="thumb-item active" onclick="selectRetouch(0)" 
+                         data-before="https://images.pexels.com/photos/2613259/pexels-photo-2613259.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+
+                    <div class="thumb-item" onclick="selectRetouch(1)" 
+                         data-before="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+
+                    <div class="thumb-item" onclick="selectRetouch(2)" 
+                         data-before="https://images.pexels.com/photos/2113855/pexels-photo-2113855.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/2113994/pexels-photo-2113994.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/2113994/pexels-photo-2113994.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+
+                    <div class="thumb-item" onclick="selectRetouch(3)" 
+                         data-before="https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         data-after="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=150">
+                    </div>
+
+                </div>
+
+                <button class="nav-btn next-btn" id="btn-next-retouch" onclick="changeRetouchSlide(1)">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 </main>
+
 
 
 <footer class="compact-footer" id="contact">
@@ -118,6 +354,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
   <script src="assets/js/portofolio.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
 
