@@ -26,12 +26,16 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.pricelist-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    /* Ubah padding atas jadi 100px atau 120px, sesuaikan dengan tinggi navbar kamu */
-    padding: 120px 20px 40px 20px; 
-}
+/* =========================================
+   RESPONSIVITAS KHUSUS HP (BALANCED + FIXED POSITION)
+   ========================================= */
+@media (max-width: 600px) {
+    .pricelist-container { 
+        /* Ubah angka pertama (padding-top) jadi 120px atau 130px */
+        padding: 120px 20px 50px; 
+    }
+    
+    /* ... sisa kode lainnya biarin aja ... */
 
 /* =========================================
    HEADER TEXT
