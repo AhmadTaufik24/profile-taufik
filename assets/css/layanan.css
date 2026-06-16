@@ -27,15 +27,15 @@ body {
 }
 
 /* =========================================
-   RESPONSIVITAS KHUSUS HP (BALANCED + FIXED POSITION)
+   CONTAINER UTAMA (DESKTOP)
+   Ini wajib ada biar nggak tertutup navbar
    ========================================= */
-@media (max-width: 600px) {
-    .pricelist-container { 
-        /* Ubah angka pertama (padding-top) jadi 120px atau 130px */
-        padding: 120px 20px 50px; 
-    }
-    
-    /* ... sisa kode lainnya biarin aja ... */
+.pricelist-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* Jarak atas 120px agar aman dari navbar */
+    padding: 120px 20px 40px; 
+}
 
 /* =========================================
    HEADER TEXT
@@ -92,7 +92,7 @@ body {
 }
 
 /* =========================================
-   KONTEN KATEGORI & BANNER (FIXED VIEWPORT)
+   KONTEN KATEGORI & BANNER
    ========================================= */
 .category-content { display: none; animation: fadeIn 0.4s ease; }
 .category-content.active { display: block; }
@@ -115,11 +115,9 @@ body {
 .banner-overlay {
     position: absolute;
     inset: 0;
-    /* Gradasi gelap di bawah agar tulisan judul putih kontras terkesan premium */
     background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
 }
 
-/* FIX JUDUL: Dikunci di kiri bawah secara independen */
 .banner-overlay h2 {
     position: absolute;
     left: 24px;
@@ -131,7 +129,6 @@ body {
     margin: 0;
 }
 
-/* FIX TOMBOL: Dikunci di kanan atas bergaya aksi overlay panel modern */
 .share-btn {
     position: absolute;
     top: 24px;
@@ -255,18 +252,18 @@ body {
 .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
 /* =========================================
-   RESPONSIVITAS KHUSUS HP (BALANCED + FIXED POSITION)
+   RESPONSIVITAS KHUSUS HP (HANYA DI BAWAH)
    ========================================= */
 @media (max-width: 600px) {
     .pricelist-container { 
-        padding: 30px 20px 50px; 
+        /* Padding atas ditambah jadi 130px biar aman di HP */
+        padding: 130px 20px 50px; 
     }
     
     .pricelist-header { margin-bottom: 25px; }
     .pricelist-header h1 { font-size: 1.8rem; margin-bottom: 10px; }
     .pricelist-header p { font-size: 0.95rem; line-height: 1.6; }
 
-    /* Tab Navigasi - FIXED & CENTERED */
     .tab-navigation {
         flex-wrap: wrap; 
         overflow-x: visible; 
@@ -281,14 +278,12 @@ body {
         padding: 8px 14px;
     }
 
-    /* Dimensi Banner di HP */
     .category-banner { 
         height: 160px; 
         border-radius: 12px;
         margin-bottom: 25px;
     }
     
-    /* Atur ulang posisi absolut di resolusi HP */
     .banner-overlay h2 { 
         font-size: 1.4rem; 
         left: 16px;
