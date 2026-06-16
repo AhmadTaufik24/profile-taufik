@@ -29,7 +29,8 @@ body {
 .pricelist-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 40px 20px;
+    /* Ubah padding atas jadi 100px atau 120px, sesuaikan dengan tinggi navbar kamu */
+    padding: 120px 20px 40px 20px; 
 }
 
 /* =========================================
