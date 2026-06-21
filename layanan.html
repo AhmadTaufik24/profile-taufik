@@ -12,7 +12,6 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/layanan.css" />
-
 </head>
 <body>
 
@@ -33,14 +32,12 @@
 
       <div class="navbar-right">
         <div class="toggle-container">
-          <!-- Toggle Mode -->
           <div class="switch-toggle active-left" id="modeToggle" title="Ubah Mode">
             <img src="https://img.icons8.com/ios-glyphs/30/f0f0f0/moon-symbol.png" alt="moon" class="icon icon-moon"/>
             <img src="https://img.icons8.com/ios-glyphs/30/1a1a1a/sun--v1.png" alt="sun" class="icon icon-sun"/>
             <span class="switch-thumb"></span>
           </div>
 
-          <!-- Toggle Bahasa -->
           <div class="switch-toggle active-left" id="langToggle" title="Ganti Bahasa">
             <img src="https://img.icons8.com/emoji/36/indonesia-emoji.png" class="icon icon-id" alt="ID" />
             <img src="https://img.icons8.com/emoji/36/united-kingdom-emoji.png" class="icon icon-uk" alt="UK" />
@@ -67,9 +64,6 @@
           <li><a href="kontak.html"  rel="noopener">Kontak</a></li>
     </ul>
   </nav>
-
-
-
 
  <main class="pricelist-container">
         
@@ -220,9 +214,43 @@
                     </button>
                 </div>
             </div>
-            <div class="placeholder-box" style="text-align: center; padding: 50px 20px; background: white; border-radius: 12px; border: 1px solid var(--border);">
-                <i class="fa-solid fa-rings-wedding" style="font-size: 2rem; color: var(--brand-blue); margin-bottom: 10px;"></i>
-                <p style="color: var(--text-muted);">Paket Wedding sedang dalam penyesuaian harga terbaik. Segera hadir!</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic (Akad Only)</h3>
+                    <div class="price">Rp 1.300.000</div>
+                    <div style="text-decoration: line-through; color: var(--text-muted); font-size: 1.1rem; margin-top: -8px; margin-bottom: 12px; font-weight: 500;">Rp 1.700.000</div>
+                    
+                    <p class="description">Pas banget buat acara akad nikah atau resepsi intimate. Simpel, santai, dan fokus ke momen sakral kamu.</p>
+                    <ul class="benefits">
+                        <li><i class="fa-solid fa-check"></i> 1 Fotografer</li>
+                        <li><i class="fa-solid fa-check"></i> Maksimal 6 Jam Kerja</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Foto (All Files)</li>
+                        <li><i class="fa-solid fa-check"></i> 80 Edited Photos (Tone & Retouch)</li>
+                        <li><i class="fa-solid fa-check"></i> 1x Cetak Frame Eksklusif 12R</li>
+                        <li><i class="fa-solid fa-check"></i> All Files via Google Drive</li>
+                    </ul>
+                    <a href="https://wa.me/6283195333168?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Basic%20Wedding" class="book-btn">Pilih Paket Ini</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="badge">Best Value</div>
+                    <h3>Premium</h3>
+                    <div class="price">Rp 5.500.000</div>
+                    <p class="description">Paket komplit buat seharian! Tim lebih banyak, dapet album fisik premium plus video cinematic buat sosmed.</p>
+                    <ul class="benefits">
+                        <li><i class="fa-solid fa-check"></i> 2 Fotografer & 1 Videografer</li>
+                        <li><i class="fa-solid fa-check"></i> Maksimal 10 Jam Kerja</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Foto (All Files)</li>
+                        <li><i class="fa-solid fa-check"></i> 150 Edited Photos</li>
+                        <li><i class="fa-solid fa-check"></i> Cinematic Highlight Video (3-5 Menit)</li>
+                        <li><i class="fa-solid fa-check"></i> Instagram/TikTok Teaser 1 Menit</li>
+                        <li><i class="fa-solid fa-check"></i> 1x Premium Album 20 Halaman</li>
+                        <li><i class="fa-solid fa-check"></i> 1x Cetak Frame Eksklusif 20R</li>
+                        <li class="highlight"><i class="fa-solid fa-star"></i> All Files via Flashdisk & GDrive</li>
+                    </ul>
+                    <a href="https://wa.me/6283195333168?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Premium%20Wedding" class="book-btn primary">Pilih Paket Ini</a>
+                </div>
             </div>
         </div>
 
@@ -248,8 +276,6 @@
         </div>
     </main>
 
-
-
 <footer class="compact-footer" id="contact">
   <div class="footer-container">
     <div class="footer-top-row">
@@ -274,11 +300,7 @@
 </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
   <script src="assets/js/script.js"></script> 
-  
   <script src="assets/js/layanan.js"></script>
 </body>
 </html>
-</html>
-
