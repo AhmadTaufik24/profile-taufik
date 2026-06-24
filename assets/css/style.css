@@ -5,12 +5,12 @@
   --text-color: #1a1a1a;
   --navbar-bg: rgba(255, 255, 255, 0.75);
   --navbar-border: #e0e0e0;
-  --btn-primary-bg: #456d91;
+  --btn-primary-bg: #4a6d92;
   --btn-primary-text: #ffffff;
   --btn-secondary-bg: #f0f0f0;
   --btn-secondary-text: #333;
   --btn-secondary-border: #e0e0e0;
-  --highlight-color: #5d9bd6;
+  --highlight-color: #7e9ec0;
   --mobile-nav-bg: rgba(255, 255, 255, 0.8);
   --mobile-nav-shadow: rgba(0, 0, 0, 0.1);
   --toggle-bg: #e9e9e9;
@@ -1987,3 +1987,70 @@ body.dark-mode .footer-nav a:hover {
   color: #fff;
 }
 
+/* ======================================================= */
+/* === FIX FINAL: NAVBAR ANIMASI & TESTIMONI LENGKAP === */
+/* ======================================================= */
+
+/* --- 1. NAVBAR ANIMASI --- */
+.desktop-nav { display: none; }
+.desktop-nav ul { display: flex; list-style: none; gap: 24px; align-items: center; }
+.desktop-nav ul li a { position: relative; padding-bottom: 4px; text-decoration: none; color: var(--text-color); font-weight: 500; font-size: 0.95rem; transition: color 0.3s ease; }
+.desktop-nav ul li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: var(--highlight-color); transition: width 0.3s ease-in-out; }
+.desktop-nav ul li a:hover::after { width: 100%; }
+.desktop-nav ul li a:hover { color: var(--highlight-color); }
+
+@media (min-width: 768px) {
+  .desktop-nav { display: block !important; }
+  .hamburger { display: none !important; }
+}
+
+/* --- 2. TESTIMONI (FIX TAMPILAN & LINK) --- */
+.testimonial-text-swiper { padding-bottom: 50px !important; }
+
+.testimonial-text-card {
+  background-color: var(--bg-color) !important;
+  border: 1px solid var(--navbar-border) !important;
+  border-radius: 16px !important;
+  padding: 25px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 320px !important; /* Ditetapkan tingginya agar link selalu muat */
+  transition: transform 0.3s ease;
+}
+
+body.dark-mode .testimonial-text-card { background-color: var(--dark-bg-color) !important; border-color: var(--dark-navbar-border) !important; }
+
+.testimonial-text-card .quote {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  font-style: italic;
+  opacity: 0.8;
+  flex-grow: 1; /* Teks quote akan memenuhi ruang atas */
+  margin-bottom: 15px !important;
+}
+
+.testimonial-text-card .author-details {
+  border-left: 3px solid var(--highlight-color);
+  padding-left: 12px;
+  margin-bottom: 15px !important;
+}
+
+/* Memastikan Link "Lihat Detail" muncul jelas */
+.view-testimonial-link {
+  display: block !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  color: var(--highlight-color) !important;
+  text-decoration: underline !important; /* Biar makin kelihatan itu link */
+  margin-top: auto !important; /* Memaksa ke paling bawah kartu */
+}
+
+/* Navigasi Panah */
+.testimonial-text-prev, .testimonial-text-next {
+  color: var(--highlight-color) !important;
+  background: var(--bg-color) !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+}
