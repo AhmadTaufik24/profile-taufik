@@ -13,6 +13,35 @@
 
   <link rel="stylesheet" href="assets/css/style.css" />
 
+
+  <script>
+  // Ambil parameter ?exp=YYYY-MM-DD dari URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const expDateStr = urlParams.get('exp');
+
+  if (expDateStr) {
+    const expDate = new Date(expDateStr).getTime();
+    const now = new Date().getTime();
+
+    // Kalau tanggal sekarang sudah melewati tanggal expired
+    if (now > expDate) {
+      document.head.innerHTML = '<title>Link Expired</title>';
+      document.body.innerHTML = `
+        <div style="text-align:center; margin-top:20vh; font-family:sans-serif; color:#333;">
+          <h2>Maaf, akses ke portofolio ini sudah kadaluarsa.</h2>
+          <p>Link ini hanya aktif selama 1 minggu.</p>
+        </div>
+      `;
+      // Hentikan eksekusi script selanjutnya
+      throw new Error('Link expired');
+    }
+  } else {
+    // (Opsional) Kalau dibuka tanpa parameter tanggal sama sekali, mau langsung ditolak atau dibolehkan?
+    // Kalau mau wajib pakai parameter tanggal, uncomment baris di bawah:
+    // document.body.innerHTML = "<h2>Link tidak valid.</h2>";
+  }
+</script>
+
 </head>
 <body>
 
