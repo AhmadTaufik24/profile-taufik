@@ -5,6 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>Profil Taufik</title>
 
+  <!-- SCRIPT PEMBATAS WAKTU AKSES (LINK EXPIRATION) -->
+  <script>
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const expDateStr = urlParams.get('exp');
+
+      if (expDateStr) {
+        // Mengatur waktu expired sampai akhir hari tersebut (23:59:59)
+        const expDate = new Date(expDateStr + 'T23:59:59').getTime();
+        const now = new Date().getTime();
+
+        if (now > expDate) {
+          // Menghentikan loading sisa halaman secara instan
+          window.stop(); 
+
+          // Menimpa tampilan dengan halaman expired yang bersih dan profesional
+          document.documentElement.innerHTML = `
+            <head>
+              <title>Link Expired</title>
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                body {
+                  margin: 0;
+                  padding: 0;
+                  height: 100vh;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                  background-color: #f8f9fa;
+                  color: #333;
+                  text-align: center;
+                }
+                .card {
+                  background: #ffffff;
+                  padding: 40px 30px;
+                  border-radius: 12px;
+                  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+                  max-width: 400px;
+                  margin: 20px;
+                }
+                h2 { margin-top: 0; color: #e63946; font-size: 22px; }
+                p { color: #666; font-size: 14px; line-height: 1.5; margin-bottom: 0; }
+              </style>
+            </head>
+            <body>
+              <div class="card">
+                <h2>Akses Kadaluarsa</h2>
+                <p>Maaf, tautan ke portofolio ini sudah melewati batas waktu akses (1 minggu).</p>
+              </div>
+            </body>
+          `;
+          throw new Error('Link Expired');
+        }
+      }
+    })();
+  </script>
+
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#ffffff"/>
   <meta name="description" content="Website Portofolio Taufik - Fotografer, Retoucher, dan Desainer."/>
@@ -12,36 +70,6 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
-
-
-  <script>
-  // Ambil parameter ?exp=YYYY-MM-DD dari URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const expDateStr = urlParams.get('exp');
-
-  if (expDateStr) {
-    const expDate = new Date(expDateStr).getTime();
-    const now = new Date().getTime();
-
-    // Kalau tanggal sekarang sudah melewati tanggal expired
-    if (now > expDate) {
-      document.head.innerHTML = '<title>Link Expired</title>';
-      document.body.innerHTML = `
-        <div style="text-align:center; margin-top:20vh; font-family:sans-serif; color:#333;">
-          <h2>Maaf, akses ke portofolio ini sudah kadaluarsa.</h2>
-          <p>Link ini hanya aktif selama 1 minggu.</p>
-        </div>
-      `;
-      // Hentikan eksekusi script selanjutnya
-      throw new Error('Link expired');
-    }
-  } else {
-    // (Opsional) Kalau dibuka tanpa parameter tanggal sama sekali, mau langsung ditolak atau dibolehkan?
-    // Kalau mau wajib pakai parameter tanggal, uncomment baris di bawah:
-    // document.body.innerHTML = "<h2>Link tidak valid.</h2>";
-  }
-</script>
-
 </head>
 <body>
 
@@ -182,7 +210,7 @@
                 <div class="swiper-pagination"></div>
             </div>
             
-            <div class="portfolio-text-content animate-slide-in-right"">
+            <div class="portfolio-text-content animate-slide-in-right">
                 <h3 id="portfolio-title"></h3>
                 <p id="portfolio-description"></p>
                 <a href="portofolio.html" class="portfolio-view-all">VIEW ALL PROJECT <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
@@ -190,8 +218,6 @@
         </div>
     </div>
 </section>
-
-
 
 <section class="stats-section">
     <div class="stats-grid">
@@ -210,10 +236,7 @@
     </div>
 </section>
 
-
-
 <!-- SECTION TENTANG SAYA (FINAL) -->
-
 <section id="about" class="about-section">
     <div class="about-container">
         <!-- Kolom Kiri: Foto Profil -->
@@ -232,9 +255,7 @@
     </div>
 </section>
 
-
 <!--SECTION PROSES KERJA-->
-
 <section id="process" class="process-section">
     <div class="section-container">
         <div class="portfolio-header">
@@ -296,9 +317,7 @@
     </div>
 </section>
 
-
 <!-- SECTION LAYANAN-->
-
 <section id="services" class="services-radial-section">
     <div class="section-container">
         <div class="portfolio-header animate-slide-down">
@@ -338,9 +357,7 @@
     </div>
 </section>
 
-
 <!--SECTION TESTIMONI-->
-
 <section id="testimonials" class="testimonial-text-section">
     <div class="section-container">
         <div class="portfolio-header animate-slide-down">
@@ -402,7 +419,7 @@
 
                 </div>
             </div>
-            <!-- Tombol Navigasi BARU -->
+            <!-- Tombol Navigasi -->
             <div class="swiper-button-prev testimonial-text-prev"></div>
             <div class="swiper-button-next testimonial-text-next"></div>
             
@@ -411,7 +428,6 @@
         </div>
     </div>
 </section>
-
 
 <section class="journal-section" id="journal">
        <div class="journal-container">
@@ -437,7 +453,6 @@
               </div>
             </div>
           </a>
-
 
           <hr class="animate-zoom-in">
 
@@ -510,17 +525,12 @@
       </div>
     </section>
 
-
-
 <div id="lightbox" class="lightbox">
     <span class="lightbox-close" id="lightbox-close">&times;</span>
     <img class="lightbox-content" id="lightbox-img" alt="Tampilan Gambar Diperbesar">
 </div>
 
-    
-
-    
-  </main>|
+  </main>
 
   <footer class="compact-footer" id="contact">
   <div class="footer-container">
@@ -550,17 +560,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
